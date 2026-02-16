@@ -12,7 +12,7 @@ The project includes a small web app (inside `emotion_movie_app/`) and sample UI
 
 
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 From the repository language mix, this project uses:
 
