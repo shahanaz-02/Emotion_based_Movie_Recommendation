@@ -22,14 +22,14 @@ From the repository language mix, this project uses:
 
 ## How recommendations work (logic)
 
--User selects / provides an emotion
--Emotion is mapped to a matching movie category
--App displays a list of recommended movies for that emotion
+- User selects / provides an emotion
+- Emotion is mapped to a matching movie category
+- App displays a list of recommended movies for that emotion
 
 ## Future Improvements
 
--Add real-time emotion detection from webcam (OpenCV / Deep Learning)
--Use TMDB API to fetch posters, ratings, genres, trailers
--Add user login + watchlist + rating-based personalization
--Improve recommendation quality using collaborative filtering
+- Add real-time emotion detection from webcam (OpenCV / Deep Learning)
+- Use TMDB API to fetch posters, ratings, genres, trailers
+- Add user login + watchlist + rating-based personalization
+- Improve recommendation quality using collaborative filtering
 
