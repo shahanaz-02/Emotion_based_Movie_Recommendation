@@ -1,0 +1,175 @@
+
+:root{
+  --bg: #0b0b0f;
+  --card: rgba(15, 15, 20, 0.92);
+  --text: #f2f2f2;
+  --muted: #b9b9c2;
+  --border: rgba(255,255,255,0.12);
+  --red: #e11d2e;
+  --red2: #b3121f;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+/* ✅ Background image placeholder (slightly opaque) */
+.bg{
+  position: fixed;
+  inset: 0;
+  background-image: url("/static/bg.jpeg"); /* <-- put your image as static/bg.jpeg */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1; /* <-- change opacity here */
+  filter: saturate(0.9) contrast(1.1);
+  z-index: -2;
+}
+
+/* Dark overlay so text stays readable */
+.bg-overlay{
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(900px 500px at 20% 10%, rgba(225,29,46,0.18), transparent 60%),
+              linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.75));
+  z-index: -1;
+}
+
+.container{
+    width: min(820px, 92vw);
+    margin: 60px auto;
+    padding: 36px 36px 28px;
+
+    /* Transparent glass effect */
+    background: rgba(0, 0, 0, 0.35);  /* transparent black */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 18px;
+    border: 1px solid rgba(5, 1, 1, 0.94);
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+
+h2{
+  text-align: center;
+  margin: 0 0 26px;
+  font-size: 26px;
+  letter-spacing: 0.4px;
+}
+
+h2 span{
+  color: var(--red);
+}
+
+label{
+  display: block;
+  margin: 14px 0 8px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+input, select{
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+ background: rgba(10, 10, 15, 0.85); /* solid dark */
+    color: #ffffff;
+  font-size: 14px;
+  outline: none;
+}
+
+input::placeholder{
+    color: rgba(255,255,255,0.6);
+}
+
+
+input:focus, select:focus{
+  border-color: rgba(225,29,46,0.7);
+  box-shadow: 0 0 0 4px rgba(225,29,46,0.18);
+}
+
+button{
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(180deg, var(--red), var(--red2));
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.08s ease, filter 0.2s ease;
+}
+
+button:hover{
+  filter: brightness(1.05);
+}
+
+button:active{
+  transform: translateY(1px);
+}
+
+.table-wrap{
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  min-width: 620px;
+}
+
+th{
+  background: rgba(225,29,46,0.15);
+  color: var(--text);
+  text-align: left;
+  padding: 12px;
+  font-size: 14px;
+}
+
+td{
+  padding: 12px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: rgba(242,242,242,0.92);
+}
+
+tr:nth-child(even){
+  background: rgba(255,255,255,0.03);
+}
+
+.badge{
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(225,29,46,0.18);
+  border: 1px solid rgba(225,29,46,0.35);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+a{
+  display: inline-block;
+  margin-top: 18px;
+  color: rgba(242,242,242,0.9);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+a:hover{
+  color: var(--red);
+  text-decoration: underline;
+}

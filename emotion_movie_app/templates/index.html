@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion Based Movie Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="bg"></div>
+<div class="bg-overlay"></div>
+
+<div class="container">
+<h2>Emotion Based Movie Recommendation System</h2>
+
+<form action="/submit" method="POST">
+
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Age:</label><br>
+    <input type="number" name="age" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" name="password" required><br><br>
+
+    <label>No of people watching:</label><br>
+    <input type="number" name="people_count" required><br><br>
+
+    <label>Select your mood:</label><br>
+    <select name="mood">
+        <option value="Happy">Happy</option>
+        <option value="Sad">Sad</option>
+        <option value="Excited">Excited</option>
+        <option value="Calm">Calm</option>
+        <option value="Fear">Fear</option>
+    </select><br><br>
+
+    <button type="submit">Get Movie Recommendations</button>
+
+</form>
+</div>
+</body>
+</html>

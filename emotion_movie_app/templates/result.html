@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommended Movies</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="bg"></div>
+<div class="bg-overlay"></div>
+
+<div class="container">
+<h2>Recommended Movies for "{{ mood }}" Mood</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Movie Title</th>
+        <th>Release Year</th>
+        <th>Language</th>
+        <th>Relevance Score</th>
+    </tr>
+
+    {% for movie in movies %}
+    <tr>
+        <td>{{ movie[0] }}</td>
+        <td>{{ movie[1] }}</td>
+        <td>{{ movie[2] }}</td>
+        <td>{{ "%.2f"|format(movie[3]) }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br><br>
+<a href="/">Go Back</a>
+</div>
+</body>
+</html>
